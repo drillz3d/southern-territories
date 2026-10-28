@@ -1,23 +1,21 @@
-# The Southern Territories — Founding Proposal Website
+# Southern Territories — Website v0.3
 
-A static, responsive presentation website for the proposed HorizonCraft Minecraft civilisation.
+A static GitHub Pages proposal website for the Southern Territories Minecraft civilisation project.
 
 ## Files
-- `index.html` — website content and illustrative territory map
-- `styles.css` — responsive design and visual styling
+- `index.html` — page content and sections
+- `styles.css` — responsive dark-green, gold and parchment-inspired design
 - `script.js` — mobile navigation
+- `assets/` — local visual assets used by the page
 
-## Publish with GitHub Pages (free)
-1. On GitHub, create a **new public repository** named `southern-territories`.
-2. On the repository page, choose **Add file → Upload files**.
-3. Extract this ZIP on your computer, then upload `index.html`, `styles.css`, `script.js`, and `README.md` from the extracted folder. Upload the files themselves, not the enclosing folder.
-4. Commit the upload to the `main` branch.
-5. Open **Settings → Pages**.
-6. Under **Build and deployment**, choose **Deploy from a branch**.
-7. Select branch `main` and folder `/(root)`, then press **Save**.
-8. Wait a few minutes. Your website should appear at `https://YOUR-USERNAME.github.io/southern-territories/`.
+## Publish the update
+1. Download and extract the ZIP.
+2. Open the existing `drillz3d/southern-territories` repository on GitHub.
+3. Choose **Add file → Upload files**.
+4. Upload/replace `index.html`, `styles.css`, and `script.js`, and upload the entire `assets` folder (including all files inside it). If GitHub's browser uploader makes folder upload awkward, drag the `assets` folder into the upload area or upload its contents while preserving the `assets/` paths.
+5. Commit the changes to `main`. GitHub Pages should update automatically; it can take a few minutes.
 
-## Important
-The territory map, house names, numbers and roadmap are illustrative proposals, not confirmed decisions. Replace them as the project develops.
+## Before sharing widely
+The founding call-to-action currently links back into the proposal. Once a project Discord invitation exists, its URL can be added to this button in `index.html`. Names, map labels, coordinates, governance and house identities are marked as provisional concepts.
 
-This website is static. It does not include user accounts, private content, or live voting. Do not publish passwords or private information in this repository.
+All images are bundled locally in `assets/`, so the page does not depend on third-party image hosting. Google Fonts are optional; system serif/sans-serif fallbacks are defined.
