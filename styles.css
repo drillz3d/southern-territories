@@ -4,3 +4,64 @@
 @media(max-width:760px){.announcement{font-size:7px;letter-spacing:.1em}.site-header{height:72px;padding:0 18px}.compass-mark{font-size:34px}.brand-copy strong{font-size:14px}.brand-copy small{font-size:6px}.menu-toggle{display:block}.main-nav{display:none;position:absolute;top:71px;left:0;right:0;padding:18px 22px;background:#06140f;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.main-nav.open{display:flex}.main-nav a{padding:12px 0;font-size:10px}.main-nav .nav-cta{padding:12px;margin-top:8px;text-align:center}.hero{min-height:680px;align-items:end}.hero-image{object-position:58% center}.hero-shade{background:linear-gradient(0deg,rgba(4,17,13,.98),rgba(4,17,13,.83) 43%,rgba(4,17,13,.18) 100%)}.hero-content{width:100%;padding:230px 24px 32px}.hero h1{font-size:clamp(38px,10vw,56px)}.hero-copy{max-width:500px}.hero-side-note{display:none}.hero-facts{gap:18px;margin-top:26px}.hero-facts strong{font-size:24px}.hero-facts span{font-size:6px}.feature-strip{grid-template-columns:repeat(2,minmax(0,1fr));padding:16px;gap:12px}.feature-card>img{height:130px}.feature-copy p{min-height:0}.section-frame{padding:54px 22px}.vision-section,.masterplan-section,.governance-section{grid-template-columns:1fr}.vision-section{gap:30px}.vision-image-wrap img{height:230px}.pillars{grid-template-columns:repeat(2,1fr);row-gap:18px}.pillars>div:nth-child(2){border-right:0}.map-art{min-height:230px;border-right:0;border-bottom:1px solid var(--line)}.masterplan-copy{padding:40px 24px}.houses-heading,.section-heading{display:block}.houses-heading>p,.section-heading>p{margin-top:20px}.house-art img{height:170px}.house-details{grid-template-columns:1fr}.house-counts{flex-wrap:wrap;gap:18px}.house-counts p{flex-basis:100%;margin:0}.governance-image{min-height:260px;border-right:0;border-bottom:1px solid var(--line)}.governance-image img{min-height:260px;max-height:320px}.governance-copy{padding:44px 24px}.infrastructure-grid{grid-template-columns:1fr}.infra-card>img,.repository-art,.farm-art{height:190px}.infra-footer{display:block}.infra-footer p{margin-top:9px}.roadmap-step{grid-template-columns:42px 1fr;gap:14px}.phase-state{grid-column:2;justify-self:start}.invitation{min-height:400px}.invitation-content{padding:45px 24px}.site-footer{grid-template-columns:1fr auto;gap:18px;padding:24px}.site-footer>p{grid-column:1/-1;grid-row:2}.site-footer nav{grid-column:1/-1;grid-row:3}.back-top{grid-column:2;grid-row:1}}
 @media(max-width:390px){.feature-strip{grid-template-columns:1fr}.feature-card>img{height:160px}.hero-facts{gap:12px}.hero-facts span{max-width:82px;line-height:1.5}.map-legend{grid-template-columns:1fr}.brand-copy strong{font-size:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Version 0.4 layout corrections: keep image galleries and content grids contained. */
+img { max-width: 100%; }
+main, section { min-width: 0; }
+.house-art {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 5px;
+  min-width: 0;
+  overflow: hidden;
+}
+.house-art img {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: clamp(150px, 22vw, 250px);
+  object-fit: cover;
+}
+.house-art img:nth-child(1) { object-position: 45% center; }
+.house-art img:nth-child(2) { object-position: center; }
+.house-art img:nth-child(3) { object-position: 60% center; }
+.house-art img:nth-child(4) { object-position: 70% center; }
+.house-art-overlay {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 28px 15px 12px;
+  background: linear-gradient(transparent, rgba(4, 14, 10, .92));
+  color: #fff0c5;
+  font-size: 8px;
+  letter-spacing: .18em;
+  pointer-events: none;
+}
+.feature-card { display: flex; flex-direction: column; }
+.feature-card > img { flex: 0 0 auto; }
+.feature-copy { flex: 1; }
+.vision-image-wrap { min-width: 0; }
+.vision-image-wrap img, .governance-image img, .infra-card > img { max-width: 100%; }
+.map-art img { display: block; }
+.house-details > article { min-width: 0; }
+.infra-card { min-width: 0; }
+.roadmap-step > div { min-width: 0; }
+.site-footer > * { min-width: 0; }
+
+@media (max-width: 760px) {
+  .house-art { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .house-art img { height: clamp(135px, 38vw, 210px); }
+  .house-art-overlay { font-size: 7px; padding: 24px 10px 9px; }
+  .feature-card > img { height: clamp(115px, 28vw, 160px); }
+}
+@media (max-width: 390px) {
+  .house-art { grid-template-columns: 1fr 1fr; }
+  .house-art img { height: 140px; }
+  .house-art-overlay { align-items: flex-start; flex-direction: column; gap: 4px; }
+}

@@ -1,4 +1,4 @@
-# Southern Territories — Website v0.3
+# Southern Territories — Website v0.4
 
 A static GitHub Pages proposal website for the Southern Territories Minecraft civilisation project.
 
@@ -19,3 +19,8 @@ A static GitHub Pages proposal website for the Southern Territories Minecraft ci
 The founding call-to-action currently links back into the proposal. Once a project Discord invitation exists, its URL can be added to this button in `index.html`. Names, map labels, coordinates, governance and house identities are marked as provisional concepts.
 
 All images are bundled locally in `assets/`, so the page does not depend on third-party image hosting. Google Fonts are optional; system serif/sans-serif fallbacks are defined.
+
+
+## Version 0.4 CSS correction
+
+Fixed the house concept gallery so the four images form a contained responsive grid instead of flowing inline, and added responsive sizing/overflow safeguards for page sections, cards, and images.
