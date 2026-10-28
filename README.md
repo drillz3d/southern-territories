@@ -1,28 +1,19 @@
-# The Southern Territories — Founding Proposal Website
+# Southern Territories — website files (v0.6)
 
-A static, responsive presentation website for the proposed HorizonCraft Minecraft civilisation.
+This release **keeps the original v0.1 website structure, typography, spacing and section order**, and replaces the image assets with better-proportioned imagery tailored to the exact slots.
 
-## Files
-- `index.html` — website content and illustrative territory map
-- `styles.css` — responsive design and visual styling
-- `script.js` — mobile navigation
+## Fixed
+- Hero: re-composed as a taller cinematic landscape to avoid extreme cropping of a wide panorama in a tall hero frame. No text is baked into the image.
+- Map: reframed the parchment-style map as a properly proportioned 2022 x 660 asset, with a full-size version accessible by clicking it. It displays at its natural aspect ratio (no forced crop or stretching).
+- Council chamber, bridge and infrastructure imagery: separate images are supplied for their purposes rather than reusing mismatched images. Updated crop and position behaviour.
+- Houses: smaller banner illustrations fit the original small sigil slots.
+- Image files are included locally, and the stylesheet URL has a new version to avoid stale browser cache.
 
-## Publish with GitHub Pages (free)
-1. On GitHub, create a **new public repository** named `southern-territories`.
-2. On the repository page, choose **Add file → Upload files**.
-3. Extract this ZIP on your computer, then upload `index.html`, `styles.css`, `script.js`, and `README.md` from the extracted folder. Upload the files themselves, not the enclosing folder.
-4. Commit the upload to the `main` branch.
-5. Open **Settings → Pages**.
-6. Under **Build and deployment**, choose **Deploy from a branch**.
-7. Select branch `main` and folder `/(root)`, then press **Save**.
-8. Wait a few minutes. Your website should appear at `https://YOUR-USERNAME.github.io/southern-territories/`.
+## Update your existing GitHub Pages site
+1. Extract this ZIP.
+2. Open the **southern-territories** folder inside it.
+3. In `github.com/drillz3d/southern-territories`, upload the **contents** of that folder (`index.html`, `styles.css`, `script.js`, `README.md`, and the `assets` folder) to the repository root and commit to `main`.
+4. In GitHub's upload screen, use "Replace" if prompted. Check that the assets are committed under `/assets/`, not under an extra nested `southern-territories/` folder.
+5. Refresh `https://drillz3d.github.io/southern-territories/` after GitHub Pages finishes deploying.
 
-## Important
-The territory map, house names, numbers and roadmap are illustrative proposals, not confirmed decisions. Replace them as the project develops.
-
-This website is static. It does not include user accounts, private content, or live voting. Do not publish passwords or private information in this repository.
-
-
-## Version 0.5 — imagery-only refresh
-
-This update restores the original v0.1 layout and typography, replacing only the CSS-drawn artwork with cinematic fantasy concept-art assets. The hero artwork has no embedded slogan or overlay caption. Upload `index.html`, `styles.css`, `script.js`, `README.md`, and the full `assets` folder to the existing GitHub Pages repository.
+All house names, identities, geography, plans and dates on the site are illustrative proposals rather than confirmed project decisions. This site is static and requires no paid hosting or external image service.
